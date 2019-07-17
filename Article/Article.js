@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "CODY IS AMAZING!",
+    date: "Jan 55st, 2019",
+    firstParagraph: `Lucas ipsum dolor sit amet palpatine bib rukh kast kir naboo iktotchi biggs glymphid yevetha. Dodonna owen feeorin darth luuke gran jin'ha. Ord thrella alderaan medon. Koon juvex bib k-3po tusken raider. Quelli palpatine zuggs obi-wan squib darklighter chewbacca ithorian. Muunilinst vebb darth ansion selkath lando hutt ubese. Kast dooku crynyd elomin. Yuvernian tund kaleesh secura. Rukh codru-ji rhen vestara hapan logray jar coruscant. Piett jerec nagai greeata secura. Mustafarian kwi caedus quence gilad cliegg.`,
+
+    secondParagraph: `Lucas ipsum dolor sit amet palpatine bib rukh kast kir naboo iktotchi biggs glymphid yevetha. Dodonna owen feeorin darth luuke gran jin'ha. Ord thrella alderaan medon. Koon juvex bib k-3po tusken raider. Quelli palpatine zuggs obi-wan squib darklighter chewbacca ithorian. Muunilinst vebb darth ansion selkath lando hutt ubese. Kast dooku crynyd elomin. Yuvernian tund kaleesh secura. Rukh codru-ji rhen vestara hapan logray jar coruscant. Piett jerec nagai greeata secura. Mustafarian kwi caedus quence gilad cliegg.`,
+
+    thirdParagraph: `Lucas ipsum dolor sit amet palpatine bib rukh kast kir naboo iktotchi biggs glymphid yevetha. Dodonna owen feeorin darth luuke gran jin'ha. Ord thrella alderaan medon. Koon juvex bib k-3po tusken raider. Quelli palpatine zuggs obi-wan squib darklighter chewbacca ithorian. Muunilinst vebb darth ansion selkath lando hutt ubese. Kast dooku crynyd elomin. Yuvernian tund kaleesh secura. Rukh codru-ji rhen vestara hapan logray jar coruscant. Piett jerec nagai greeata secura. Mustafarian kwi caedus quence gilad cliegg.`
   }
 ];
 
