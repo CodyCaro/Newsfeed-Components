@@ -3,7 +3,7 @@
 const data = [
   {
     title: 'Lambda School Students: "We\'re the best!"',
-    date: 'Nov 5th, 2018',
+    date: "Nov 5th, 2018",
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
         moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
         watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
@@ -23,8 +23,8 @@ const data = [
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.`
   },
   {
-    title: 'Javascript and You, ES6',
-    date: 'May 7th, 2019',
+    title: "Javascript and You, ES6",
+    date: "May 7th, 2019",
     firstParagraph: `Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost
         Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot
         snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods
@@ -43,8 +43,8 @@ const data = [
         sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.`
   },
   {
-    title: 'React vs Angular vs Vue',
-    date: 'June 7th, 2019',
+    title: "React vs Angular vs Vue",
+    date: "June 7th, 2019",
     firstParagraph: `Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmander Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charizard Lorem ipsum dolor sit amet,
@@ -71,8 +71,8 @@ const data = [
         Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
   },
   {
-    title: 'Professional Software Development in 2019',
-    date: 'Jan 1st, 2019',
+    title: "Professional Software Development in 2019",
+    date: "Jan 1st, 2019",
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
           hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
           Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
@@ -112,3 +112,59 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+class Article {
+  constructor(article, articleData) {
+    this.articleProperty = article;
+
+    const articleTitle = article.querySelector("h2");
+    articleTitle.textContent = articleData.title;
+
+    const articleContent = article.querySelectorAll("p");
+    articleContent[1].textContent = articleData.firstParagraph;
+    articleContent[2].textContent = articleData.secondParagraph;
+    articleContent[3].textContent = articleData.thirdParagraph;
+
+    const articleDate = article.querySelector("p.date");
+    articleDate.textContent = articleData.date;
+
+    const expandButton = article.querySelector(".expandButton");
+    expandButton.textContent = "Expand";
+    expandButton.addEventListener("click", this.toggleContent.bind(this));
+  }
+
+  toggleContent() {
+    this.articleProperty.classList.toggle("article-open");
+  }
+}
+
+const createNewArticle = () => {
+  const articles = document.querySelector(".articles");
+  console.log(articles);
+
+  const newArticle = document.createElement("div");
+  newArticle.classList.add("article");
+
+  const newArticleHeader = document.createElement("h2");
+  newArticle.appendChild(newArticleHeader);
+
+  const newArticleDate = document.createElement("p");
+  newArticleDate.classList.add("date");
+  newArticle.appendChild(newArticleDate);
+
+  const newArticleContent = [];
+  for (let i = 0; i < 3; i++) {
+    newArticleContent.push(document.createElement("p"));
+    newArticle.appendChild(newArticleContent[i]);
+  }
+
+  const newExpandButton = document.createElement("span");
+  newExpandButton.classList.add("expandButton");
+  newArticle.appendChild(newExpandButton);
+
+  articles.appendChild(newArticle);
+  return newArticle;
+};
+
+data.map(dataContent => {
+  const newArticleObject = new Article(createNewArticle(), dataContent);
+});
